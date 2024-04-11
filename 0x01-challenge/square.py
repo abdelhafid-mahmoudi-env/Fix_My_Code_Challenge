@@ -2,8 +2,10 @@
 """ square class """
 
 
-class square():
+class Square():
     """ square class """
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
         """ instantiation """
@@ -11,20 +13,21 @@ class square():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """ Area of the square """
+        """ area of my square """
         return self.width * self.height
 
-    def PermiterOfMySquare(self):
-        """ perimeter """
+    def permiter_of_my_square(self):
+        """ this is the permiter of my square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """ printable representation """
+        """ the printable of the coordinations """
         return "{}/{}".format(self.width, self.height)
 
-if __name__ == "__main__":
 
-    s = square(width=12, height=9)
+if __name__ == "__main__":
+    """ Create a square object """
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
-    print(s.PermiterOfMySquare())
+    print(s.permiter_of_my_square())
